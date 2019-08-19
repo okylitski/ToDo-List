@@ -1,0 +1,439 @@
+/*-----Common configuration-----*/
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+.section {
+    font-size: 0;
+    text-align: center;
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 15px;
+}
+
+/*-----configuration tabs-----*/
+.nav-tabs {
+    padding: 90px 0 0 0;
+    background-image: url("../images/bg2ready.png");
+    font-size: 15px;
+}
+
+.nav-link {
+    color: white;
+    margin: 0 0 0 30px;
+}
+
+.nav-link:hover {
+    color: white;
+}
+
+/*----current of tabs-----*/
+.current_line {
+    position: relative;
+}
+
+label {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 5px 0 0 0;
+}
+
+.current_task_name {
+    position: absolute;
+    left: 37%;
+}
+
+.current_priority {
+    position: absolute;
+    left: 3.7%;
+}
+
+.current_edit {
+    position: absolute;
+    left: 83%;
+}
+
+.current_complete {
+    position: absolute;
+    left: 70%;
+}
+
+.current_delete {
+    position: absolute;
+    left: 92%;
+}
+
+.line {
+    padding: 40px 0 0 0;
+    display: block;
+    border-bottom: 1px solid black;
+}
+
+.frame_current {
+    overflow: scroll;
+    overflow-x:hidden;
+    height: 420px;
+    background: #ffffff;
+    padding: 7px 0 0 0;
+    font-size: 15px;
+}
+/*-----count-----*/
+.par{
+    position: relative;
+}
+.count{
+    font-size:12px;
+    text-align: center;
+    
+    color: black;
+    position: absolute;
+    left: 105px;
+    top: -10px;
+    display: block;
+         width: 20px;
+      height: 20px;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      border-radius: 10px;
+      background: red;
+}
+/*-----complete of tabs-----*/
+.complete_line {
+    position: relative;
+}
+
+.complete_task_name {
+    position: absolute;
+    left: 37%;
+}
+
+.complete_priority {
+    position: absolute;
+    left: 3.7%;
+}
+
+.complete_edit {
+    position: absolute;
+    left: 83%;
+}
+
+.complete_delete {
+    position: absolute;
+    left: 92%;
+}
+
+.frame_complete {
+    overflow: scroll;
+    overflow-x:hidden;
+    height: 420px;
+    background: #ffffff;
+    padding: 7px 0 0 0;
+    font-size: 15px;
+}
+.inline_third_complete{
+    display: inline-block;
+    width: 39%;
+    position: absolute;
+    left: 76%;
+    top: 3px;
+}
+/*-----delet of tabs-----*/
+.delete_line {
+    position: relative;
+}
+
+.delete_task_name {
+    position: absolute;
+    left: 37%;
+}
+
+.delete_priority {
+    position: absolute;
+    left: 3.7%;
+}
+
+.delete_return {
+    position: absolute;
+    left: 92%;
+}
+
+.frame_delete {
+    overflow: scroll;
+    overflow-x:hidden;
+    height: 420px;
+    background: #ffffff;
+    padding: 7px 0 0 0;
+    font-size: 15px;
+}
+.inline_third_delete{
+    display: inline-block;
+    width: 39%;
+    position: absolute;
+    left: 86%;
+    top: 3px;
+}
+/*-----function add-----*/
+.task_add {
+  margin: 10px 0 10px 89.5%
+}
+
+.form-group {
+    margin: auto;
+    font-size: 15px;
+    position: relative;
+}
+/*-----Form prioryty add-----*/
+.form_priority {
+    padding: 10px;
+}
+
+.one {
+    display: inline-block;
+    width: 30%;
+    font-family: sans-serif;
+    cursor: pointer;
+    position: absolute;
+    left: -100%;
+    top: 20px;
+}
+
+.two {
+    display: inline-block;
+    width: 30%;
+    font-family: sans-serif;
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    top: 20px;
+
+}
+
+.three {
+    display: inline-block;
+    width: 30%;
+    font-family: sans-serif;
+    cursor: pointer;
+    position: absolute;
+    left: 120%;
+    top: 20px;
+}
+
+label {
+    cursor: pointer;
+}
+
+input:checked + label {
+    cursor: pointer;
+}
+
+.radio {
+    z-index: -1;
+    opacity: 0;
+}
+
+.radio + label {
+    position: relative;
+    padding: 0 0 0 30px;
+    cursor: pointer;
+}
+
+.radio + label:after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 4px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #9FD468;
+    opacity: 0;
+    transition: .2s;
+}
+
+.radio:checked + label:after {
+    opacity: 1;
+}
+
+textarea.form-control {
+    outline: none;
+}
+
+/*new task*/
+.task {
+    position: relative;
+    margin: 3px 0 ;
+    padding: 10px 0;
+}
+
+/*-----Configuration of button new task-----*/
+.inline_first {
+    display: inline-block;
+    width: 10%;
+    text-align: left;
+    position: absolute;
+    top: 10px;
+    left: 4%;
+}
+
+.inline_second {
+    display: inline-block;
+    width: 50%;
+    text-align: left;
+}
+
+.inline_third {
+    display: inline-block;
+    width: 39%;
+    position: absolute;
+    left: 69%;
+    top: 3px;
+}
+
+.btn_complete {
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 25px;
+    margin: 0 0 0 10%;
+    color: #0aca84;
+    box-shadow: none
+}
+.btn_complete:active , .btn_edit:active,.btn_delete:active, .btn_return:active{
+    border: 0;
+    outline: none;
+}
+.btn_complete:focus , .btn_edit:focus, .btn_delete:focus, .btn_return:focus{
+    border: 0;
+    outline: none;
+}
+.btn_edit {
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 25px;
+    margin: 0 0 0 20%;
+    color: #3b5999;
+}
+
+.btn_delete {
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 25px;
+    margin: 0 0 0 20%;
+    color: #3b5999;
+}
+.btn_return {
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 25px;
+    margin: 0 0 0 20%;
+    color: #3b5999;
+}
+.style-2::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0);
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+
+.style-2::-webkit-scrollbar
+{
+    width: 8px;
+    background-color: #F5F5F5;
+}
+
+.style-2::-webkit-scrollbar-thumb
+{
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #3b5999;
+}
+/*-----clear-----*/
+.clear{
+    margin: 10px 0 0 90%;
+}
+/*-----Second of modals forms for button edit-----*/
+.newModal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1050;
+    display: none;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    outline: 0;
+}
+.newFade {
+    transition: opacity .15s linear;
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+.newOne {
+    display: inline-block;
+    width: 30%;
+    font-family: sans-serif;
+    cursor: pointer;
+    position: absolute;
+    left: -100%;
+    top: 20px;
+}
+
+.newTwo {
+    display: inline-block;
+    width: 30%;
+    font-family: sans-serif;
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    top: 20px;
+
+}
+
+.newThree {
+    display: inline-block;
+    width: 30%;
+    font-family: sans-serif;
+    cursor: pointer;
+    position: absolute;
+    left: 120%;
+    top: 20px;
+}
+.newRadio {
+    z-index: -1;
+    opacity: 0;
+}
+
+.newRadio + label {
+    position: relative;
+    padding: 0 0 0 30px;
+    cursor: pointer;
+}
+
+.newRadio + label:after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 4px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #9FD468;
+    opacity: 0;
+    transition: .2s;
+}
+
+.newRadio:checked + label:after {
+    opacity: 1;
+}

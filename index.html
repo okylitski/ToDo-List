@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <link rel="stylesheet" href="assets/fontawesome-free-5.9.0-web/css/all.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>I want to do!</title>
+</head>
+<body >
+<div class="section container">
+    <div class="btn btn-primary task_add" data-toggle="modal" data-target="#exampleModal"
+        data-whatever="@mdo">Add+
+        </div>
+    <!-- Tabs bar -->
+        <ul class="nav nav-tabs " id="myTab" role="tablist">
+
+        <li class="nav-item par">
+            <a class="nav-link active" id="current-tab" data-toggle="tab" href="#current" role="tab"
+               aria-controls="current" aria-selected="true">Current</a>
+            <span class="count"></span>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="complete-tab" data-toggle="tab" href="#complete" role="tab" aria-controls="complete"
+               aria-selected="false">Complete</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="delete-tab" data-toggle="tab" href="#delete" role="tab" aria-controls="Delete"
+               aria-selected="false">Delete</a>
+        </li>
+        </ul>
+        <!-- frame -->
+    <div class="tab-content " id="myTabContent">
+        <div class="tab-pane fade show active content" id="current" role="tabpanel" aria-labelledby="current">
+            <div class="current_line">
+                <label class="current_task_name">Task name</label>
+                <label class="current_priority">Priority</label>
+                <label class="current_edit">Edit</label>
+                <label class="current_complete">Complete</label>
+                <label class="current_delete">Delete</label>
+            </div>
+            <div class="line"></div>
+            <div class="frame_current style-2">
+            </div>
+            <div class="line"></div>
+            <button class="btn btn-primary clear">clear</button>
+        </div>
+        <div class="tab-pane fade content" id="complete" role="tabpanel" aria-labelledby="completed">
+            <div class="complete_line">
+                <label class="complete_task_name">Task name</label>
+                <label class="complete_priority">Priority</label>
+                <label class="complete_edit">Edit</label>
+                <label class="complete_delete">Delete</label>
+            </div>
+            <div class="line"></div>
+            <div class="frame_complete style-2"></div>
+            <div class="line"></div>
+            <button class="btn btn-primary clear">clear</button>
+        </div>
+        <div class="tab-pane fade content" id="delete" role="tabpanel" aria-labelledby="deleted">
+            <div class="delete_line">
+                <label class="delete_task_name">Task name</label>
+                <label class="delete_priority">Priority</label>
+                <label class="delete_return">return</label>
+            </div>
+            <div class="line"></div>
+            <div class="frame_delete style-2" ></div>
+            <div class="line"></div>
+            <button class="btn btn-primary clear">clear</button>
+        </div>
+    </div>
+    <!-- first of Modals forms for button add -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Add new Task</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">Name:</label>
+                            <input name='name' type="text" class="form-control" id="recipient-name">
+                        </div>
+                        <div class="form-group">
+                            <label for="message-text" class="col-form-label">Describe:</label>
+                            <textarea name='describe' class="form-control" id="message-text"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="form-group">
+                    <label class="form_priority">Priority of task</label><br>
+                    <div class="one"><input value="urgent" type="radio" class="radio" id="radio"
+                                            name="priority"/><label for="radio">urgent</label></div>
+                    <div class="two"><input value="perpetual" type="radio" class="radio" id="radio_two"
+                                            checked
+                                            name="priority"/><label for="radio_two">perpetual</label></div>
+                    <div class="three"><input value="trial" type="radio" class="radio" id="radio_three"
+                                              name="priority"/><label for="radio_three">trial</label></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary save">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Second of Modals forms for button edit -->
+    <div class="newModal newFade" id="exp"  tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Add new Task</h5>
+                    <button type="button" class="close new" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">Name:</label>
+                            <input name='newName' type="text" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="message-text" class="col-form-label">Describe:</label>
+                            <textarea name='newDescribe' class="form-control"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="form-group">
+                    <label class="form_priority">Priority of task</label><br>
+                    <div class="newOne"><input value="urgent" type="radio" class="radio" id="newRadio"
+                                            name="newPriority"/><label for="newRadio">urgent</label></div>
+                    <div class="newTwo"><input value="perpetual" type="radio" class="radio" id="newRadio_two"
+                                            checked
+                                            name="newPriority"/><label for="newRadio_two">perpetual</label></div>
+                    <div class="newThree"><input value="trial" type="radio" class="radio" id="newRadio_three"
+                                              name="newPriority"/><label for="newRadio_three">trial</label></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary new" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary newSave">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Optional JavaScript -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="assets/js/script.js"></script>
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+</html>
