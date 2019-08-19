@@ -41,8 +41,7 @@ function todo() {
             setTimeout(reload, 2500);
         });
         $(".save").click(function () {
-            validate();
-             counterPlus()       
+            validate();      
         });
         $(document).on('click', '.btn_complete', function () {
             var index = $(this).closest('section').index()
@@ -84,6 +83,7 @@ function todo() {
            {
            if(localStorage.getItem("counter")!=null)
                  {
+                    $(".count").css('display', 'block')
                      counter = Number(localStorage.getItem("counter"));
                      document.querySelector(".count").innerHTML = counter;
                  }
@@ -91,9 +91,9 @@ function todo() {
            }
          var counter= 0;        
 
-         function counterPlus() {          
+         function counterPlus() {    
+            $(".count").css('display', 'block')
             counter = Number(localStorage.getItem("counter"));
-
             console.log(counter);
             counter += 1;
             localStorage.setItem("counter",counter);             
@@ -106,6 +106,9 @@ function todo() {
             counter -= 1;
             localStorage.setItem("counter",counter);             
             document.querySelector(".count").innerHTML = counter;
+            if (counter == 0){
+                 $(".count").css('display', 'none')
+            }
          }
   function deleteCounter() {
        var tab = $('.active.content').attr('aria-labelledby');
@@ -202,7 +205,12 @@ function todo() {
     }
     function validate() {
         if (names.value) {
+             $("#recipient-name").css('border','1px solid #ced4da')
             addTask()
+            counterPlus() 
+        }
+        else{
+            $("#recipient-name").css('border','1px solid red')
         }
         names.value = '';
         describes.value = '';
