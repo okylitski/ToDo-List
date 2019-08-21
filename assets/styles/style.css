@@ -439,79 +439,97 @@ textarea.form-control {
     opacity: 1;
 }
 
-@media (min-width: 991.98){
-.current_line {
-    position: relative;
-}
+/*-----for tabs-----*/
 
-label {
-    font-size: 18px;
-    font-weight: 600;
-    margin: 5px 0 0 0;
-}
-
-.current_task_name {
+@media only screen and (max-width : 768px) {
+    /*-----current frame-----*/
+  .current_complete {
     position: absolute;
-    left: 87%;
+    left: 60%;
 }
-
-.current_priority {
-    position: absolute;
-    left: 3.7%;
-}
-
-.current_edit {
-    position: absolute;
-    left: 83%;
-}
-
-.current_complete {
-    position: absolute;
-    left: 70%;
-}
-
 .current_delete {
     position: absolute;
-    left: 92%;
+    left: 89%;
 }
-}
-@media (min-width: 767.98){
-    .current_line {
-    position: relative;
-}
-
-label {
-    font-size: 18px;
-    font-weight: 600;
-    margin: 5px 0 0 0;
-}
-
-.current_task_name {
-    position: absolute;
-    left: 87%;
-}
-
-.current_priority {
-    position: absolute;
-    left: 3.7%;
-}
-
 .current_edit {
     position: absolute;
-    left: 83%;
+    left: 79%;
+}
+.current_task_name {
+    position: absolute;
+    left: 25%;
+}
+.current_priority {
+    position: absolute;
+    left: 1%;
+}
+.task_add {
+    margin: 10px 0 10px 86%;
+}
+.clear {
+    margin: 10px 0 0 87%;
+}
+.inline_first {
+    display: inline-block;
+    width: 10%;
+    text-align: left;
+    position: absolute;
+    top: 10px;
+    left: 1%;
+}
+.inline_second {
+    display: inline-block;
+    width: 48%;
+    text-align: left;
+}
+.inline_third {
+    display: inline-block;
+    width: 39%;
+    position: absolute;
+    left: 63%;
+    top: 3px;
 }
 
-.current_complete {
+/*-----complete frame-----*/
+.complete_priority {
     position: absolute;
-    left: 70%;
+    left: 1%;
+}
+.complete_task_name {
+    position: absolute;
+    left: 25%;
+}
+.complete_delete {
+    position: absolute;
+    left: 89%;
+}
+.complete_edit {
+    position: absolute;
+    left: 77%;
+}
+.inline_third_complete {
+    display: inline-block;
+    width: 32%;
+    position: absolute;
+    left: 80%;
+    top: 3px;
+}
+.inline_third_complete .btn_edit{
+    margin: 0 4% 0 0;
 }
 
-.current_delete {
+/*-----delete frame-----*/
+
+.delete_priority {
     position: absolute;
-    left: 92%;
+    left: 1%;
 }
-    
+.delete_task_name {
+    position: absolute;
+    left: 25%;
 }
-@media (min-width: 575.98){
-    
+.delete_return {
+    position: absolute;
+    left: 89%;
+}
 }
