@@ -15,7 +15,7 @@ To launch the application, follow the link - https://okylitski.github.io/ToDo-Li
 - Deleted task can be restored;
 - The color of tasks depends on the priority selected;
 - There is a function to clear the to-do list with full cleaning of the local storage.
-
+- Code comments
 
 In order to get the application for review, editing or testing, clone project:
 ```
